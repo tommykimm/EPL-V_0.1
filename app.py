@@ -11,7 +11,7 @@ app.config['MYSQL_DB'] = 'practice'
 mysql = MySQL(app)
 
 
-#hellotesting! testing again
+#hellotesting! testing like a ding dong
 
 #outside comment data
 def get_data():
