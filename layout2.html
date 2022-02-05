@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> 
+    <link rel="stylesheet" href="static/css/styles2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+    {% block content %}  
+    {% endblock %}  
+
+    <main>
+        <div class="container">
+          <div class="tablebox">
+                <!-- results table -->
+                <div class="results">
+                    <div class="results_0">
+                        <h4 id="results_1">Results</h4>
+                        <table id="resultstable">
+                                {% if result %}
+                                    <!-- <thead>
+                                        <tr id="resultsid">
+                                            <th id="results">Results</th>
+                                        </tr>
+                                    </thead> -->
+                                {% for row in result %}
+                                    <tbody>
+                                        <tr id="tables2">
+                                            <td>{{ row.dates }}</td>
+                                            <td>{{ row.teams }}</td>
+                                            <td>{{ row.scores }}</td>
+                                            <td>{{ row.teams2 }}</td>
+                                            <td>{{ row.outcomes }}</td>
+                                        </tr>
+                                {% endfor %}
+                                        </tbody>
+                                    </table>
+                                {% endif %}
+                        </table>
+                    </div>
+                </div>
+                <!-- topscorers table -->
+                <div class="resultstable2">
+                    <h4 id="topscorers_1">Top Scorers</h4>
+                    <table id="topscorers">
+                            {% if winners %}
+                                <!-- <thead>
+                                    <tr id="row2">
+                                        <th id="topscorers2">Top Scorers</th>
+                                    </tr>
+                                </thead> -->
+                            {% for row in winners %}
+                                <tbody>
+                                    <tr id="tables2">
+                                        <td>{{ row.player }}</td>
+                                        <td>{{ row.goals }}</td>
+                                    </tr>
+                            {% endfor %}
+                                    </tbody>
+                                </table>
+                            {% endif %}
+                    </table>
+                </div>
+                <!-- form section -->
+                <div class='form'>
+                    <h4 id="form_1">Add Comment</h4>
+                        <form action="/mancity" class="container1" method="POST">
+                            <input type = "hidden" id="id" name="id" placeholder="ID"/> <br>
+                            <input type="text" id="comment" name="comment" placeholder="Enter comment">
+                            <button id="post">Post</button>
+                            <ul>
+                                {% for text in all_text %}
+                                <li> {{ text[1] }} </li>
+                                {% endfor %}
+                            </ul>
+                        </form>
+                
+                        <!-- <script>
+                            var post= document.getElementById("post");
+                                post.addEventListener("click", function(){
+                            var commentBoxValue= document.getElementById("comment-box").value;
+                            var li = document.createElement("li");
+                            var text = document.createTextNode(commentBoxValue);
+                            li.appendChild(text);
+                            document.getElementById("unordered").appendChild(li);
+                            });
+                        </script>  -->
+                </div>
+            </div>
+        </div>
+
+      
+    </main>
+
+    <footer>
+            <a href="https://www.ea.com/sports"><img src="static/images/easports.svg" alt="pic1"  id= "easports"  ></a>
+            <a href="https://www.barclays.co.uk"><img src="static/images/barclays.svg" alt="pic1" id="barclays"></a>
+            <a href="https://www.castrol.com"><img src="static/images/castrol.svg" alt="pic1" id="castrol"></a>
+            <a href="https://www.nike.com/"><img src="static/images/nike.svg" alt="pic1" id="nike"></a>
+    </footer>
+</body>

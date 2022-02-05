@@ -1,0 +1,421 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> 
+    <!-- <link rel="stylesheet" href="/Users/minhyeok/Desktop/Python/venv/bin/static/css/styles2.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+   
+    <style>
+        *{
+    /* border: 1px tomato solid; */
+    font-family: 'Ubuntu', sans-serif;
+    margin:0;
+    padding:0; 
+}
+
+header{
+    /* border: 5px solid green; */
+    width: 100%;
+    min-height: 350px;
+    background: linear-gradient(0.25turn , #91dbe5, #8face9 );
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#football{
+    /* border: 1px tomato solid; */
+    width:5%;
+    top: 10px;
+    left: 10px;
+    position: absolute;
+   
+}
+
+#football:hover{
+    transform: scale(1.1);
+    transition: 0.2s ease-in;
+    cursor: pointer
+}
+
+#pic{
+    width:100%;
+    height: 250px;
+    position: relative;
+}
+
+.dotmancity {
+  border: 2px red solid;
+  border:1px solid grey;
+  height: 150px;
+  width: 150px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: -120px;
+  position: relative;
+}
+
+.container{
+    background: white;
+    /* border: 3px red solid; */
+    align-items: center;
+    text-align: center;
+    /* padding: 40px; */
+    min-height: calc(100vh - 350px - 70px );
+    width: 100%;
+    justify-content: center;
+    
+}
+
+.tablebox{
+/* border: 2px solid aqua; */
+/* width: fit-content; */
+display:flex;
+justify-content: center;
+align-items: center;
+/* flex-direction: column; */
+/* width: 100%; */
+margin-top: 50px;
+margin-bottom: 50px;
+padding: 0 40px;
+box-sizing: border-box;
+}
+
+.results_0{
+border: solid darkblue 2px;
+}
+
+ #resultstable{
+border: 1px solid grey;
+align-content: center;
+text-align: center;
+/* min-width: 400px; */
+/* height:200px;  */
+}
+
+
+.resultstable2{
+border: 2px solid darkblue;
+/* width: fit-content; */
+height: 222px;
+align-content: center;
+text-align: center;
+margin-left: 50px;
+}
+
+#topscorers{
+/* border: 1px solid red; */
+text-align: left;
+position: relative;
+width: 300px;
+height: 204px;
+/* padding:20%; */
+}
+
+
+.container1{
+position: relative; 
+margin-top: 0px; 
+background: white;
+width: 300px; 
+height: 166px;
+padding: 20px 0; 
+text-align: center; 
+overflow: hidden; 
+z-index: 2;
+border: 2px solid darkblue;
+}
+
+.form{
+    padding: 0px;
+    border: 1px solid blanchedalmond;
+    text-align: center;
+    width:fit-content;
+    margin-left: 50px;
+}
+
+
+
+
+@media (max-width:500px) {
+    .tablebox{
+        display: flex;
+        flex-direction: column;
+        gap: 5em;
+        
+        justify-content: right;
+        text-align: center; 
+        align-items: right;
+    }
+
+    .results_0{
+        width: 300px;
+        justify-content: right;
+        text-align: center; 
+        align-items: right;
+        margin-left: 35px;
+    }
+
+    #resultstable{
+        border: 1px solid grey;
+        align-content: right;
+        align-items: right;
+        text-align: center;
+        min-width: 300px;
+        font-size: 13px;
+        /* height:200px;  */
+        }
+
+    .resultstable2{
+        width:300px;
+        align-content: center;
+        text-align: center;
+        /* margin-left: 150px; */
+        }
+    
+
+    #topscorers{
+        /* border: 1px solid red; */
+        text-align: left;
+        /* position: relative; */
+        width: 300px;
+        /* height: 204px; */
+        /* padding:20%; */
+        }
+
+    .container1{
+        position: relative; 
+        margin-top: 0px; 
+        background: white;
+        /* width: 300px;  */
+        /* height: 166px; */
+        padding: 20px 0; 
+        text-align: center; 
+        overflow: hidden; 
+        z-index: 2;
+        border: 2px solid darkblue;
+        }
+        
+    .form{
+        padding: 0px;
+        border: 1px solid blanchedalmond;
+        text-align: center;
+        width:fit-content;
+        margin-left: 50px;
+    }
+}
+
+#form_1, #results_1 ,  #topscorers_1{
+    /* border: 1px solid red; */
+    background: linear-gradient(0.25turn , #4f2ad8, #3a8db3 );
+    color: white;
+}
+
+
+.container1 input { 
+    height: 50px; 
+    width: 70%; 
+    border-radius: 5px; 
+    font-size: 10px;
+    }
+
+.container1 button{
+    width: 30%;
+}
+
+.container1 input {
+    border: 2px solid darkblue;
+    padding-left: 12px;
+    margin-bottom: 12px; 
+    transition: .4s;
+    }
+
+.container1 input:focus { border: 2px solid #00bcd4; }
+
+.container1 button {
+    Cursor: pointer; 
+    background: whitesmoke;
+    letter-spacing: 1px; 
+    transition: .4s;
+    border-radius: 10px;
+    }
+
+.container1 button:hover { background: linear-gradient(0.25turn , #9198e5, #e27373 ); }
+
+ul {
+    position: absolute; 
+    width: 304px; 
+    background: white;
+    margin-top: 10px; 
+    padding-top: 0px;
+    transition: .4s;
+    font-size: 8px;
+    }
+     
+ul li { padding: 2px; }
+
+    
+footer{
+    margin-top: 0px;
+    /* border: 5px solid yellow; */
+    height:70px;
+    width: 100%;
+    text-align: center;
+    padding-top: 0px;
+    background: linear-gradient(0.25turn , #91dbe5, #8face9 );
+}
+
+#easports{
+   width:60px;
+   height:60px;
+}
+
+#easports:hover{
+    transform: scale(1.1);
+    transition: 0.2s ease-in;
+    cursor: pointer
+}
+
+#barclays{
+   width:120px;
+   height:60px;
+}
+
+#barclays:hover{
+    transform: scale(1.1);
+    transition: 0.2s ease-in;
+    cursor: pointer
+}
+
+#castrol{
+   width:80px;
+   height:60px;
+}
+
+#castrol:hover{
+    transform: scale(1.1);
+    transition: 0.2s ease-in;
+    cursor: pointer
+}
+
+#nike{
+   width:60px;
+   height:60px;
+}
+
+#nike:hover{
+    transform: scale(1.1);
+    transition: 0.2s ease-in;
+    cursor: pointer
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+            <div class="logo">
+                <img src="static/images/mancitystadium.webp" alt="mancity" id="pic">
+                <a href="/index8"><img src="static/images/logo.svg" alt="pllogo" id="football"></a>
+            </div>
+            <span class="dotmancity">
+                <img src="static/images/mancity.svg" alt="pic1" id="pic12">
+            </span>
+        <h1>{{team}}</h1>
+    </header>
+    <main>
+        <div class="container">
+          <div class="tablebox">
+                <!-- results table -->
+                <div class="results">
+                    <div class="results_0">
+                        <h4 id="results_1">Results</h4>
+                        <table id="resultstable">
+                                {% if result %}
+                                    <!-- <thead>
+                                        <tr id="resultsid">
+                                            <th id="results">Results</th>
+                                        </tr>
+                                    </thead> -->
+                                {% for row in result %}
+                                    <tbody>
+                                        <tr id="tables2">
+                                            <td>{{ row.dates }}</td>
+                                            <td>{{ row.teams }}</td>
+                                            <td>{{ row.scores }}</td>
+                                            <td>{{ row.teams2 }}</td>
+                                            <td>{{ row.outcomes }}</td>
+                                        </tr>
+                                {% endfor %}
+                                        </tbody>
+                                    </table>
+                                {% endif %}
+                        </table>
+                    </div>
+                </div>
+                <!-- topscorers table -->
+                <div class="resultstable2">
+                    <h4 id="topscorers_1">Top Scorers</h4>
+                    <table id="topscorers">
+                            {% if winners %}
+                                <!-- <thead>
+                                    <tr id="row2">
+                                        <th id="topscorers2">Top Scorers</th>
+                                    </tr>
+                                </thead> -->
+                            {% for row in winners %}
+                                <tbody>
+                                    <tr id="tables2">
+                                        <td>{{ row.player }}</td>
+                                        <td>{{ row.goals }}</td>
+                                    </tr>
+                            {% endfor %}
+                                    </tbody>
+                                </table>
+                            {% endif %}
+                    </table>
+                </div>
+                <!-- form section -->
+                <div class='form'>
+                    <h4 id="form_1">Add Comment</h4>
+                        <form action="/mancity" class="container1" method="POST">
+                            <input type = "hidden" id="id" name="id" placeholder="ID"/> <br>
+                            <input type="text" id="comment" name="comment" placeholder="Enter comment">
+                            <button id="post">Post</button>
+                            <ul>
+                                {% for text in all_text %}
+                                <li> {{ text[1] }} </li>
+                                {% endfor %}
+                            </ul>
+                        </form>
+                
+                        <!-- <script>
+                            var post= document.getElementById("post");
+                                post.addEventListener("click", function(){
+                            var commentBoxValue= document.getElementById("comment-box").value;
+                            var li = document.createElement("li");
+                            var text = document.createTextNode(commentBoxValue);
+                            li.appendChild(text);
+                            document.getElementById("unordered").appendChild(li);
+                            });
+                        </script>  -->
+                </div>
+            </div>
+        </div>
+
+      
+    </main>
+
+    <footer>
+            <a href="https://www.ea.com/sports"><img src="static/images/easports.svg" alt="pic1"  id= "easports"  ></a>
+            <a href="https://www.barclays.co.uk"><img src="static/images/barclays.svg" alt="pic1" id="barclays"></a>
+            <a href="https://www.castrol.com"><img src="static/images/castrol.svg" alt="pic1" id="castrol"></a>
+            <a href="https://www.nike.com/"><img src="static/images/nike.svg" alt="pic1" id="nike"></a>
+    </footer>
+</body>
+</html>
+
